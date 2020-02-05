@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/talman37/cloudmsa.git
+          search-paths:
+            - configs
+server:
+  port: 8888
