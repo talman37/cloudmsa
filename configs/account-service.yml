@@ -2,8 +2,8 @@ eureka:
   client:
     service-url:
       default-zone: http://jhm.io/eureka
-    instance:
-      instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 logging:
   level:
