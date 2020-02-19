@@ -10,7 +10,7 @@ spring:
     username: sa
     password: sa
   jpa:
-    open-in-view: flase
+    open-in-view: false
     hibernate:
       naming:
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
