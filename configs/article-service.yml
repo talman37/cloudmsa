@@ -1,0 +1,36 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5673
+    username: guest
+    password: guest
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:handson-article
+    username: sa
+    password: sa
+  jpa:
+    open-in-view: false
+    hibernate:
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+      ddl-auto: validate
+    properties:
+      hibernate.format_sql: true
+      hibernate.enable_lazy_load_no_trans: true
+  flyway:
+    locations: ["classpath:db//migration"]
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://jhm.io/eureka
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+logging:
+  level:
+    org.springframework.web: info
+
+say:
+  cheese: remove refresh

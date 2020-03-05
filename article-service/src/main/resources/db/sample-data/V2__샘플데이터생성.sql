@@ -1,0 +1,5 @@
+INSERT INTO ARTICLES
+(ID, TITLE, CONTENT, AUTHOR_ID, AUTHOR_NAME, CREATED_AT, UPDATED_AT)
+VALUES
+('TEST-ARTICLE-001', '테스트 제목', '테스트', 'josh@nomad-coders.io', '조쉬홍', NOW(), NOW())
+;
