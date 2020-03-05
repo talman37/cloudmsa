@@ -23,7 +23,7 @@ zuul:
       serviceId: account-service
       stripPrefix: true
     article-service:
-      path: /articles/*
+      path: /articles/**
       serviceId: article-service
       stringPrefix: true
   ignored-services: '*' # routes 에 정의되지 않은 요청을 무시함.
